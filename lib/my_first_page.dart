@@ -1,32 +1,18 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MyFirstPage extends StatefulWidget {
+  const MyFirstPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyFirstPage> createState() => _MyFirstPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyFirstPageState extends State<MyFirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("data"),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: const <Widget>[
-            ListTile(
-              title: Text("Menu 1"),
-            ),
-            DrawerHeader(
-              decoration: BoxDecoration(color: Colors.blue),
-              child: Text("Drawer Header Part"),
-            )
-          ],
-        ),
+        title: const Text("My First Page"),
       ),
       body: const Center(
         child: Text("Hello, New World!"),

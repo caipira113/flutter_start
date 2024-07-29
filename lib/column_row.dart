@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class ColumnRowPage extends StatelessWidget {
+  const ColumnRowPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hello"),
+        title: const Text("Column Row"),
       ),
       body: Container(
         alignment: Alignment.center,

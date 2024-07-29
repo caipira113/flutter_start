@@ -1,10 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-
-// import 'my_first_page.dart';
-// import 'column_row.dart';
+import 'column_row.dart';
 import 'stack.dart';
+import 'my_first_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +19,74 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Main'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+              ),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.first_page),
+              title: const Text('My First Page'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyFirstPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.view_column),
+              title: const Text('Column Row'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ColumnRowPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.layers),
+              title: const Text('Stack'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const StackPage()),
+                );
+              },
+            )
+          ],
+        ),
+      ),
+      body: Center(
+        child: Text(
+          'Home Page',
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
+      ),
     );
   }
 }
