@@ -26,14 +26,11 @@ class _ListView1State extends State<ListView1> {
         ),
         body: ListView.builder(
             itemCount: postList.length,
-            itemBuilder: (BuildContext con, int index)  {
+            itemBuilder: (BuildContext con, int index) {
               return postContainer(
                   title: postList[index]["title"] as String,
-                  colorData: postList[index]["color"] as Color
-              );
-            }
-        )
-    );
+                  colorData: postList[index]["color"] as Color);
+            }));
   }
 
   Widget postContainer({String title = '', Color colorData = Colors.red}) {
