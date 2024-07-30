@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_start/creative.dart';
+import 'my_first_page.dart';
 import 'column_row.dart';
 import 'stack.dart';
-import 'my_first_page.dart';
+import 'creative.dart';
+import 'package:flutter_start/align.dart';
 
 void main() {
   runApp(const MyApp());
@@ -86,6 +87,16 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Creative()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.add_box),
+              title: const Text('Align'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Align1()),
                 );
               },
             )
