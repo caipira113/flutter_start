@@ -13,10 +13,34 @@ class SecondView extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(15),
-          color: Colors.blue,
-          child: const Text("Nya"),
+        child: ElevatedButton(
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (BuildContext con) {
+                return AlertDialog(
+                  title: const Text("Nya"),
+                  content: const Text("Lucky 🍀"),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      child: const Text("Ok"),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+          child: const Text(
+            "Nya",
+            style: TextStyle(fontSize: 16),
+          ),
         ),
       ),
     );

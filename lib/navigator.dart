@@ -11,15 +11,22 @@ class Navigator1 extends StatelessWidget {
         title: const Text("Navigator"),
       ),
       body: Center(
-        child: GestureDetector(
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => const SecondView()),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const SecondView()),
+            );
+          },
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
           ),
-          child: Container(
-            padding: const EdgeInsets.all(15),
-            color: Colors.blue,
-            child: const Text("-> Second View"),
+          child: const Text(
+            "Go to Second View",
+            style: TextStyle(fontSize: 16),
           ),
         ),
       ),
