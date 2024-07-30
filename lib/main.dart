@@ -9,6 +9,7 @@ import 'image.dart';
 import 'button.dart';
 import 'navigator.dart';
 import 'list_view.dart';
+import 'scrollview_pagination.dart';
 
 void main() {
   runApp(const MyApp());
@@ -153,6 +154,17 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const ListView1()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.data_object),
+              title: const Text('Scrollview Pagination'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ScrollviewPagination()),
                 );
               },
             )
