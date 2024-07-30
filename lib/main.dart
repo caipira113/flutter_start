@@ -8,6 +8,7 @@ import 'alert.dart';
 import 'image.dart';
 import 'button.dart';
 import 'navigator.dart';
+import 'list_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -142,6 +143,16 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Navigator1()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.list),
+              title: const Text('List View'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ListView1()),
                 );
               },
             )
