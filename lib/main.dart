@@ -7,6 +7,7 @@ import 'package:flutter_start/align.dart';
 import 'alert.dart';
 import 'image.dart';
 import 'button.dart';
+import 'navigator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -131,6 +132,16 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Button()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.move_up),
+              title: const Text('Navigator'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Navigator1()),
                 );
               },
             )
