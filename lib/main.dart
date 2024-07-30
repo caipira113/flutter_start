@@ -4,6 +4,7 @@ import 'column_row.dart';
 import 'stack.dart';
 import 'creative.dart';
 import 'package:flutter_start/align.dart';
+import 'alert.dart';
 
 void main() {
   runApp(const MyApp());
@@ -97,6 +98,16 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Align1()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.warning),
+              title: const Text('Alert'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Alert()),
                 );
               },
             )
