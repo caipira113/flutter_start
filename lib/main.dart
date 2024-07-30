@@ -6,6 +6,7 @@ import 'creative.dart';
 import 'package:flutter_start/align.dart';
 import 'alert.dart';
 import 'image.dart';
+import 'button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -120,6 +121,16 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Image1()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.smart_button),
+              title: const Text('Button'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Button()),
                 );
               },
             )
