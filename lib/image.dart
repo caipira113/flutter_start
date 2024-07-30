@@ -10,11 +10,19 @@ class Image1 extends StatelessWidget {
         title: const Text("Image"),
       ),
       body: Center(
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width / 2,
-          height: MediaQuery.of(context).size.height / 2,
-          child: Image.network(
-              "https://for.stella.place/assets/Stella_R3_iOS_1024.png"),
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            double width = constraints.maxWidth * 0.5;
+            double height = constraints.maxHeight * 0.5;
+
+            return SizedBox(
+              width: width,
+              height: height,
+              child: Image.network(
+                  "https://for.stella.place/assets/Stella_R3_iOS_1024.png",
+                  fit: BoxFit.contain),
+            );
+          },
         ),
       ),
     );
