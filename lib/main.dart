@@ -10,6 +10,7 @@ import 'button.dart';
 import 'navigator.dart';
 import 'list_view.dart';
 import 'scrollview_pagination.dart';
+import 'navigator_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -165,6 +166,17 @@ class MyHomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ScrollviewPagination()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.border_bottom),
+              title: const Text('Navigator Bar'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const NavigatorBar()),
                 );
               },
             )
