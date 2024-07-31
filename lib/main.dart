@@ -11,6 +11,7 @@ import 'navigator.dart';
 import 'list_view.dart';
 import 'scrollview_pagination.dart';
 import 'navigator_bar.dart';
+import 'form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -177,6 +178,17 @@ class MyHomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const NavigatorBar()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.input),
+              title: const Text('Form'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Form1()),
                 );
               },
             )
