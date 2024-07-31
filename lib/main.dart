@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_start/provider/album.dart';
-import 'package:provider/provider.dart';
 import 'my_first_page.dart';
 import 'column_row.dart';
 import 'stack.dart';
@@ -17,14 +15,7 @@ import 'form.dart';
 import 'view/album.dart'; // Import AlbumView
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AlbumProvider()), // Add AlbumProvider
-      ],
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
