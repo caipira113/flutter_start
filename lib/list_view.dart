@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ListView1 extends StatefulWidget {
-  const ListView1({super.key});
+class ListViewPage extends StatefulWidget {
+  const ListViewPage({super.key});
 
   @override
-  State<ListView1> createState() => _ListView1State();
+  State<ListViewPage> createState() => _ListViewPageState();
 }
 
-class _ListView1State extends State<ListView1> {
+class _ListViewPageState extends State<ListViewPage> {
   final postList = [
     {"title": "Sample title 1", "color": Colors.blue},
     {"title": "Sample title 2", "color": Colors.greenAccent},

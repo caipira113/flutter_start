@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SecondView extends StatelessWidget {
-  const SecondView({super.key});
+class SecondViewPage extends StatelessWidget {
+  const SecondViewPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start/second_view.dart';
 
-class Navigator1 extends StatelessWidget {
-  const Navigator1({super.key});
+class NavigatorPage extends StatelessWidget {
+  const NavigatorPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class Navigator1 extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (_) => const SecondView()),
+              MaterialPageRoute(builder: (_) => const SecondViewPage()),
             );
           },
           style: ElevatedButton.styleFrom(

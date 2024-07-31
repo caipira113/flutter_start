@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start/result_screen.dart';
 
-class Form1 extends StatefulWidget {
-  const Form1({super.key});
+class FormPage extends StatefulWidget {
+  const FormPage({super.key});
 
   @override
-  State<Form1> createState() => _Form1State();
+  State<FormPage> createState() => _FormPageState();
 }
 
-class _Form1State extends State<Form1> {
+class _FormPageState extends State<FormPage> {
   final _key = GlobalKey<FormState>();
   late String _username, _email;
 
@@ -96,7 +96,7 @@ class _Form1State extends State<Form1> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ResultScreen(
+                            builder: (context) => ResultScreenPage(
                               username: _username,
                               email: _email,
                             ),

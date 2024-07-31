@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ResultScreen extends StatelessWidget {
+class ResultScreenPage extends StatelessWidget {
   final String username;
   final String email;
 
-  const ResultScreen({super.key, required this.username, required this.email});
+  const ResultScreenPage({super.key, required this.username, required this.email});
 
   @override
   Widget build(BuildContext context) {
