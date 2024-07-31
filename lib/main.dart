@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_start/provider/album.dart';
+import 'package:provider/provider.dart';
 import 'my_first_page.dart';
 import 'column_row.dart';
 import 'stack.dart';
@@ -12,9 +14,17 @@ import 'list_view.dart';
 import 'scrollview_pagination.dart';
 import 'navigator_bar.dart';
 import 'form.dart';
+import 'view/album.dart'; // Import AlbumView
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AlbumProvider()), // Add AlbumProvider
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -187,11 +197,20 @@ class MyHomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const Form1()),
+                  MaterialPageRoute(builder: (context) => const Form1()),
                 );
               },
-            )
+            ),
+            ListTile(
+              leading: const Icon(Icons.album),
+              title: const Text('Albums'), // Label for the new item
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AlbumView()),
+                );
+              },
+            ),
           ],
         ),
       ),
